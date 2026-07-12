@@ -13,8 +13,8 @@ multi-user consistency via WebSocket + Redis Pub/Sub.
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
 ## Live Demo
-- Frontend: `https://<username>.github.io/parkwise`
-- Backend API: `https://parkwise-api.<platform>.app`
+- Frontend: `https://banrish777.github.io/parkwise`
+- Backend API: Coming Soon
 
 *(Note: free-tier backends may spin down after inactivity; first request can take
 a few seconds.)*
