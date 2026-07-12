@@ -80,30 +80,30 @@ responsibilities, locking strategy, and design decisions.
 - Docker & Docker Compose, Java 21, Maven, Node.js 20+
 
 ### One-Command Local Stack
-\`\`\`bash
+```bash
 docker compose up -d
-\`\`\`
+```
 This starts PostgreSQL and Redis. Then:
 
 ### Database
-\`\`\`bash
+```bash
 psql -h localhost -U parkwise -d parkwise -f database/schema.sql
 psql -h localhost -U parkwise -d parkwise -f database/init.sql
-\`\`\`
+```
 
 ### Backend
-\`\`\`bash
+```bash
 cd backend
 mvn clean install
 mvn spring-boot:run
-\`\`\`
+```
 
 ### Frontend
-\`\`\`bash
+```bash
 cd frontend
 npm install
 ng serve
-\`\`\`
+```
 
 Visit `http://localhost:4200`.
 
@@ -111,20 +111,20 @@ Visit `http://localhost:4200`.
 Full REST + WebSocket endpoint reference: [`docs/api-reference.md`](docs/api-reference.md)
 
 ## Project Structure
-\`\`\`
+```
 parkwise/
 ├── backend/      # Spring Boot application
 ├── frontend/     # Angular application
 ├── database/     # SQL schema & seed scripts
 ├── docker-compose.yml
 └── docs/         # Architecture & API documentation
-\`\`\`
+```
 
 ## Testing
-\`\`\`bash
+```bash
 cd backend
 mvn test
-\`\`\`
+```
 Tests run against real PostgreSQL and Redis containers in CI to validate locking and
 Pub/Sub behavior, not mocks.
 
